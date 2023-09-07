@@ -7,14 +7,14 @@ def main():
     arguments = sys.argv[1:]
 
     # Initialize a variable to store the sum
-    total = 0
+    result = 0
 
     # Loop through the arguments and add them to the total
     for arg in arguments:
-        total += int(arg)
+        result += int(arg)
 
     # Print the result
-    print(total)
+    print(result)
 
 if __name__ == "__main__":
     main()
