@@ -8,4 +8,3 @@ a = b
 b = temp
 
 print("a={:d} - b={:d}".format(a, b))
-
