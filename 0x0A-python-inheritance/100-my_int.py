@@ -5,12 +5,13 @@ class module
 
 
 class MyInt(int):
-    """class with int object"""
+    def __init__(self, value):
+        self.value = value
 
-    def __ee__(self, other):
-        """equal equal method"""
-        return super().__ee__(other)
+    def __eq__(self, other):
+        """Inverts the == operator."""
+        return self.value != other
 
     def __ne__(self, other):
-        """not equal method"""
-        return super().__ne__(other)
+        """Inverts the != operator."""
+        return self.value == other
