@@ -2,7 +2,10 @@
 """Defines a text file line-counting function."""
 
 
-def write_file(filename="", text=""):
-     """Return the number of lines in a text file."""
-    with open(filename, 'w', encoding='utf-8') as file:
-        return file.write(text)
+def number_of_lines(filename=""):
+    """Return the number of lines in a text file."""
+    lines = 0
+    with open(filename) as f:
+        for line in f:
+            lines += 1
+    return lines
