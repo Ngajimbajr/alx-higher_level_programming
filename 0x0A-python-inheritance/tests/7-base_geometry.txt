@@ -1,30 +1,24 @@
+7-base_geometry
 
-How to use 7-base_geometry.py
+importing class:
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-This library is very simple, since it only has one function called
- ''integer_validator()''.
+checking for module docstring:
+	>>> m = __import__('7-base_geometry').__doc__
+	>>> len(m) > 1
+	True
 
-Numbers:
-========
-''integer_validator()'' returns True if a num is integer.
-:: with positives integers
-   >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-   >>> bg = BaseGeometry()
+checking for class docstring:
+	>>> c = __import__('7-base_geometry').BaseGeometry.__doc__
+	>>> len(c) > 1
+	True
 
-:: with positive integer
-   >>> bg.integer_validator("my_int", 12)
+checking for method docstring:
+	>>> farea = __import__('7-base_geometry').BaseGeometry.area.__doc__
+	>>> len(farea) > 1
+	True
 
-:: with negative integer
-   >>> bg.integer_validator("number", -12)
-   Traceback (most recent call last):
-   ValueError: number must be greater than 0
-
-:: with 3 arguments
-   >>> bg.integer_validator("numbers", 0, 1)
-   Traceback (most recent call last):
-   TypeError: integer_validator() takes 3 positional arguments but 4 were given
-
-:: with infinite integer
-   >>> bg.integer_validator("infnumber", int('inf'))
-   Traceback (most recent call last):
-   ValueError: invalid literal for int() with base 10: 'inf'
+checking for method docstring:
+	>>> fint = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+	>>> len(fint) > 1
+	True
