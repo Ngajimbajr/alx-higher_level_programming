@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""class Mylist"""
+"""1-my_list module"""
 
 
 class MyList(list):
-    """MyList class"""
-
+    """MyList child of list"""
     def print_sorted(self):
-        """print list"""
+        """print_sorted - prints the list, but sorted"""
         print(sorted(self))
