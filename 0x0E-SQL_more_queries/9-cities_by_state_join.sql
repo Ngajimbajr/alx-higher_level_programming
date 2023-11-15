@@ -1,10 +1,8 @@
--- Specify the database name as an argument when executing the script
+-- lists all cities contained in the database hbtn_0d_usa
+   -- Each record should display: cities.id - cities.name - states.name
+   -- Results must be sorted in ascending order by cities.id
+   -- The database name will be passed as an argument of the mysql command
 
--- Switch to the hbtn_0d_usa database
-USE hbtn_0d_usa;
-
--- List all cities with their IDs, names, and corresponding state names
-SELECT cities.id, cities.name, states.name AS state_name
-FROM cities, states
-WHERE cities.state_id = states.id
-ORDER BY cities.id ASC;
+SELECT cities.id, cities.name, states.name FROM cities
+JOIN states ON cities.state_id=states.id
+ORDER BY cities.id;
